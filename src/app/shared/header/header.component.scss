@@ -1,0 +1,64 @@
+
+// .notification {
+//     position: relative;
+//     float: right;
+// }
+
+// .notification a:hover {
+//     background: rgb(0, 255, 76);
+   
+// }
+ 
+// .notification[data-badge]:after {
+//     content:attr(data-badge);
+//     position:absolute;
+//     top:2px;
+//     font-size:.4em;
+//     background:blue;
+//     color:white;
+//     width:11px;
+//     height:11px;
+//     text-align:center;
+//     line-height:11px;
+//     border-radius:50%;
+    
+// }
+
+.badge {
+    font-size:.4em;
+    position:absolute;
+    border-radius:50%;
+    color:white;
+    background:blue;
+}
+
+.glyphicon.glyphicon-bell {
+    color:grey;
+}
+
+.image {
+    width:20px;
+    height:20px;
+    margin-top:6px;
+    border-radius:50%;
+}
+
+input {
+    border: none;
+    background: transparent;
+    outline: none; 
+    cursor: pointer; 
+    min-width:50px;
+}
+
+.title { 
+    letter-spacing: 2px;
+    font-family: Brush Script MT;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color:rgb(18, 138, 64);
+    text-shadow: 2px 0px rgb(15, 15, 15);    
+}
+
+
