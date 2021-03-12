@@ -2,7 +2,95 @@
     <header class="header">
         <h3> Issues</h3>
     </header>
+    <div class="row issue-content">
 
+        <!-- InMemory View -->
+    <!-- <div *ngFor="let issue of issues">
+     <div *ngIf="issue.status=='High Priority'; else other_condition">
+        <div class="col-sm-4 to-do">
+            <h4>To Do 4</h4>
+            <div class="row area-1">
+            <span class="id-o">{{issue.id}}</span> <i class="date-o">{{issue.date}}</i>
+            <h4>{{issue.title}}</h4>
+            <p>{{issue.description}}</p>
+            <i class="status">Asignee</i> <i class="status pull-right">Status</i>
+                <div class="row">
+                    <div class="card" style="width: 11rem;">
+                    <div class="col-xs-6">
+                    <img class="card-img-top image" src="./../assets/default-profie-icon.jpg" alt="pic">
+                    </div>
+                    <div class="col-xs-6">
+                    <div class="card-body">
+                    <h5 class="card-title">{{issue.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{issue.designation}}</h6> 
+                    </div>  
+                    </div>        
+                    </div>
+                    <button type="button" class="btn btn-danger btn-xs">{{issue.status}}</button>
+                </div>
+            </div>
+        </div>
+     </div>
+      
+     <ng-template #other_condition >
+         <div *ngIf="issue.status=='In Progress'; else done_condition">
+            <div class="col-sm-4 in-progress">
+                <h4>In Progress 2</h4>
+                <div class="row area-2">
+                    <span class="id-o">{{issue.id}}</span> <i class="date-o">{{issue.date}}</i>
+                    <h4>{{issue.title}}</h4>
+                    <p>{{issue.description}}</p>
+                <i class="status">Asignee</i> <i class="status pull-right">Status</i>
+                <div class="row">
+                    <div class="card" style="width: 11rem;">
+                    <div class="col-xs-6">
+                        <img class="card-img-top image" src="./../assets/default-profie-icon.jpg" alt="pic">
+                    </div>
+                    <div class="col-xs-6">
+                     <div class="card-body">
+                        <h5 class="card-title">{{issue.name}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{issue.designation}}</h6> 
+                     </div>  
+                    </div>        
+                    </div>
+                    <button type="button" class="btn btn-info btn-xs">{{issue.status}}</button>
+                </div>
+                </div>
+               
+            </div>
+         </div>
+      
+     </ng-template>
+     
+       <ng-template #done_condition>
+        <div class="col-sm-4 done-o">
+            <h4>Done 3</h4>
+            <div class="row area-3">
+                <span class="id-o">{{issue.id}}</span> <i class="date-o">{{issue.date}}</i>
+                <h4>{{issue.title}}</h4>
+                <p>{{issue.description}}</p>
+            <i class="status">Asignee</i> <i class="status pull-right">Status</i>
+            <div class="row">
+                <div class="card" style="width: 11rem;">
+                <div class="col-xs-6">
+                    <img class="card-img-top image" src="./../assets/default-profie-icon.jpg" alt="pic">
+                </div>
+                <div class="col-xs-6">
+                 <div class="card-body">
+                    <h5 class="card-title">{{issue.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{issue.designation}}</h6> 
+                 </div>  
+                </div>        
+                </div>
+                <button type="button" class="btn btn-success btn-xs">{{issue.status}}</button>
+            </div>
+            </div>          
+        </div>
+       </ng-template>
+     </div>  -->
+    
+
+    <!-- Static View -->
     <div class="row issue-content">
    
         <div class="col-sm-4 to-do">
@@ -206,6 +294,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 

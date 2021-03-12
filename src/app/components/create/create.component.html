@@ -2,95 +2,95 @@
     <header class="header">
        <h4> Create</h4>
     </header>
-<form name="create"  ngNativeValidate>
+<form name="create" [formGroup]="createForm"  ngNativeValidate (ngSubmit)="onSubmit()">
     <!-- <div class="main-form"> -->
    <div class="row">
     <div class="form-group col-xs-12">
         <label for="title">Title:</label>
-        <input type="text" class="form-control" name="title" rows="2" style="height: 50px;" placeholder="Text" required>       
+        <input type="text" class="form-control" formControlName="title" name="title" rows="2" style="height: 50px;" placeholder="Text" required>       
     </div>
    </div>
  <div class="row">
     <div class="form-group col-xs-6">
         <label for="type">Type:</label>
-        <input type="text" class="form-control" name="type" required>
+        <input type="text" class="form-control" formControlName="type" name="type" required>
     </div>
 
     <div class="form-group col-xs-6">
         <label for="status">Status:</label>
-        <input type="text" class="form-control" name="status" required>       
+        <input type="text" class="form-control" formControlName="status" name="status" required>       
     </div>
  </div>
     
  <div class="row"> 
     <div class="form-group col-xs-6">
         <label for="priority">Priority: </label>
-        <input type="text" class="form-control" name="priority" required>
+        <input type="text" class="form-control" formControlName="priority" name="priority" required>
     </div>
 
     <div class="form-group col-xs-6">
         <label for="resolution">Resolution: </label>
-        <input type="text" class="form-control" name="resolution" required>
+        <input type="text" class="form-control" formControlName="resolution" name="resolution" required>
     </div>
  </div>
 
  <div class="row">
     <div class="form-group col-xs-6">
         <label for="affectsVersion">Affects Version/s: </label>
-        <input type="text" class="form-control" name="affectsVersion" required>
+        <input type="text" class="form-control" formControlName="affectsVersion" name="affectsVersion" required>
     </div>
        
     <div class="form-group col-xs-6">
         <label for="fixVersion">Fix Version/s:</label>
-        <input type="text" class="form-control" name="fixVersion" required>
+        <input type="text" class="form-control" formControlName="fixVersion" name="fixVersion" required>
     </div>
   </div>
   <div class="row">        
     <div class="form-group col-xs-6">
         <label for="component">Component/s:</label>
-        <input type="text" class="form-control" name="component" required>
+        <input type="text" class="form-control" formControlName="component" name="component" required>
     </div>
         
     <div class="form-group col-xs-6">
         <label for="assignee">Assignee:</label>
-        <input type="text" class="form-control" name="assignee" required>
+        <input type="text" class="form-control" formControlName="assignee" name="assignee" required>
     </div>
   </div>
   <div class="row">    
     <div class="form-group col-xs-6">
         <label for="labels">Labels:</label>
-        <input type="text" class="form-control" name="labels" required>
+        <input type="text" class="form-control" formControlName="labels" name="labels" required>
     </div>
         
     <div class="form-group col-xs-6">
         <label for="reporter">Reporter:</label>
-        <input type="text" class="form-control" name="reporter" required>
+        <input type="text" class="form-control" formControlName="reporter" name="reporter" required>
     </div>
   </div>     
   <div class="row">     
     <div class="form-group col-xs-6">
         <label for="sprint">Sprint:</label>
-        <input type="text" class="form-control" name="sprint" required>
+        <input type="text" class="form-control" formControlName="sprint" name="sprint" required>
     </div>
         
     <div class="form-group col-xs-6">
         <label for="description">Description:</label>
-        <input type="text" class="form-control" name="description" required>
+        <input type="text" class="form-control" formControlName="description" name="description" required>
     </div>
   </div>
   <div class="row">       
     <div class="form-group col-xs-6">
         <label for="storyPoints">Story Points:</label>
-        <input type="text" class="form-control" name="storyPoints" required>
+        <input type="text" class="form-control" formControlName="storyPoints" name="storyPoints" required>
     </div>
        
     <div class="form-group col-xs-6">
         <label for="attachment">Attachment:</label>
-        <input type="file" class="form-control" name="attachment" required>
+        <input type="file" class="form-control" formControlName="attachment" name="attachment" required>
     </div>
   </div>
     <div class="form-group col-xs-12"> 
-        <button class="btn btn-primary pull-right" type="submit"> 
+        <button class="btn btn-primary pull-right" type="submit" [disabled]="!createForm.valid"> 
          Submit >
         </button> 
     </div>    

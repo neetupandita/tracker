@@ -1,3 +1,4 @@
+import { IssueService } from './service/issue.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,6 +12,20 @@ import { CreateComponent } from './components/create/create.component';
 import { HomeComponent } from './shared/home/home.component';
 import { IssueDetailsComponent } from './components/issues/issue-details/issue-details.component';
 
+import { HttpClientModule } from '@angular/common/http';
+//import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+//import { InMemoryDataService } from './../app/service/in-memory-data.service';
+import { ProductComponent } from './components/product/product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +35,25 @@ import { IssueDetailsComponent } from './components/issues/issue-details/issue-d
     IssuesComponent,
     CreateComponent,
     HomeComponent,
-    IssueDetailsComponent
+    IssueDetailsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false },
+    // ),
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [IssueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

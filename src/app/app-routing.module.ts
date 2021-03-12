@@ -4,6 +4,7 @@ import { CreateComponent } from './components/create/create.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IssueDetailsComponent } from './components/issues/issue-details/issue-details.component';
 import { IssuesComponent } from './components/issues/issues.component';
+import { ProductComponent } from './components/product/product.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './shared/home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -41,14 +42,16 @@ const routes: Routes = [
     path: 'issue-details',
     component: IssueDetailsComponent
   },
+  { path: 'products', 
+    component: ProductComponent },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/dashboard',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/dashboard',
     pathMatch: 'full'
   }
 ];
